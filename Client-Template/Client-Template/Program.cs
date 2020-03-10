@@ -51,7 +51,7 @@ namespace Client_Template
         {
             // Call driver
             IntPtr OutBuff = Marshal.AllocHGlobal(500); // We just alloc large enough here
-            APIDef.RtlZeroMemory(OutBuff, 100);
+            APIDef.RtlZeroMemory(OutBuff, 500);
 
             APIDef.IO_STATUS_BLOCK isb = new APIDef.IO_STATUS_BLOCK();
             UInt32 CallRes = APIDef.NtDeviceIoControlFile(
